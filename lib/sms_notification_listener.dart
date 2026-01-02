@@ -8,12 +8,7 @@ class SmsMessage {
   final int? date;
   final int? dateSent;
 
-  SmsMessage({
-    this.address,
-    this.body,
-    this.date,
-    this.dateSent,
-  });
+  SmsMessage({this.address, this.body, this.date, this.dateSent});
 
   factory SmsMessage.fromMap(Map<dynamic, dynamic> map) {
     return SmsMessage(
@@ -41,18 +36,20 @@ class SmsMessage {
 
 /// Main plugin class for listening to SMS notifications
 class SmsNotificationListener {
-  static const MethodChannel _channel =
-      MethodChannel('sms_notification_listener');
-  static const EventChannel _eventChannel =
-      EventChannel('sms_notification_listener/events');
+  static const MethodChannel _channel = MethodChannel(
+    'sms_notification_listener',
+  );
+  static const EventChannel _eventChannel = EventChannel(
+    'sms_notification_listener/events',
+  );
 
   static Stream<SmsMessage>? _onSmsReceived;
 
   /// Stream of incoming SMS messages
   static Stream<SmsMessage> get onSmsReceived {
-    _onSmsReceived ??= _eventChannel
-        .receiveBroadcastStream()
-        .map((dynamic event) => SmsMessage.fromMap(event as Map));
+    _onSmsReceived ??= _eventChannel.receiveBroadcastStream().map(
+      (dynamic event) => SmsMessage.fromMap(event as Map),
+    );
     return _onSmsReceived!;
   }
 
