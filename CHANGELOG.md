@@ -1,3 +1,8 @@
+## 0.0.2
+
+* Formatted Dart code to comply with `dart format` standards.
+
+
 ## 0.0.1
 
 * Initial release of the `sms_notification_listener` plugin.

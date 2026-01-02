@@ -15,7 +15,7 @@ Add `sms_notification_listener` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  sms_notification_listener: ^0.0.1
+  sms_notification_listener: ^0.0.2
 ```
 
 ## Android Setup
