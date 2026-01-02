@@ -1,6 +1,6 @@
 name: sms_notification_listener
 description: "A Flutter plugin to listen for incoming SMS notifications on Android devices."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/ikeoffiah/sms_notification_listener
 repository: https://github.com/ikeoffiah/sms_notification_listener
 issue_tracker: https://github.com/ikeoffiah/sms_notification_listener/issues
