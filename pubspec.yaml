@@ -8,7 +8,7 @@ issue_tracker: https://github.com/ikeoffiah/sms_notification_listener/issues
 
 environment:
   sdk: ^3.10.4
-  flutter: ">=1.17.0"
+  flutter: ">=1.20.0"
 
 dependencies:
   flutter:
